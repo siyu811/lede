@@ -1,3 +1,4 @@
+
 # 
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
@@ -5,14 +6,13 @@
 #
 # Copyright (C) 2020 KFERMercer
 #
-name: OpenWrt-CI
+name: OpenWrt-CI  X86
 
 on:
   schedule:
     - cron: 0 20 * * *
   release:
     types: [published]
-  repository_dispatch:
   workflow_dispatch:
     inputs:
       ssh:
@@ -24,7 +24,7 @@ jobs:
 
   build_openwrt:
 
-    name: Build OpenWrt firmware x86
+    name: Build OpenWrt firmware
 
     runs-on: ubuntu-latest
 
